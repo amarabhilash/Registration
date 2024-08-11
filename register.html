@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Register</h1>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact No:</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <fieldset>
+                <legend>Gender:</legend>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course:</legend>
+                <label><input type="checkbox" name="course" value="java"> Java</label>
+                <label><input type="checkbox" name="course" value="php"> PHP</label>
+                <label><input type="checkbox" name="course" value="python"> Python</label>
+                <label><input type="checkbox" name="course" value="html"> HTML</label>
+            </fieldset>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select Country</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+            </select>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="" disabled selected>Select State</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+<br></br>
+            <button type="submit">Register</button><br></br>
+
+            <button type="reset">Reset</button>
+        </form>
+        <p class="switch-page">Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
